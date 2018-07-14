@@ -1,5 +1,5 @@
-import {IOperation} from "../operations/IOperation";
-import {TestType} from "./TestType";
+import {IOperation} from "../operation/IOperation";
+import {TestType} from "../shared/enum/TestType";
 export interface ITest {
     testType: TestType;
     name: string;

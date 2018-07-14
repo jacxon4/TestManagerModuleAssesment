@@ -1,5 +1,5 @@
-import {TestType} from "./TestType";
-import {IOperation} from "../operations/IOperation";
+import {TestType} from "../shared/enum/TestType";
+import {IOperation} from "../operation/IOperation";
 import {ITest} from "./ITest";
 export class ImmunologyTest implements ITest {
     private _testType:TestType;
