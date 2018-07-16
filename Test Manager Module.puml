@@ -1,4 +1,6 @@
 @startuml
+TestManagerModule --> ITest
+TestManagerModule --> IOperation
 ITest <|-- MicrobiologyTest
 ITest <|-- BiochemistryTest
 ITest <|-- HaematologyTest

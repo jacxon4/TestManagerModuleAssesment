@@ -27,9 +27,8 @@ Stakeholders might ask to add new type of operations to be performed over the te
 The chosen patter is the [Visitor pattern](https://www.codeproject.com/Articles/186185/Visitor-Design-Pattern) as it's main purpose is to detach the model (also called Elements) from the operations (also called Visitors) that may be applied to it.
 As Tests may have different types, and the same operation performed over them differ on the implementation, the visitor pattern ensures that each operation gather all possible implementation in a cohesive approach.
 
-![Visitor pattern diagram](https://commons.wikimedia.org/wiki/File:Estructura.png)
 
-Depending on the technology, specific method can be implemented for each Operation - Test type pair or using polymorphism to identify them.
+Depending on the technology, specific method can be implemented for each Operation - Test type pair or using polymorphism to identify them. As a demonstration purpose, this project use the same signature for any of the operations over different Test types
 
 By using the Visitor pattern, the next quality attributes are achieved:
 
@@ -37,6 +36,10 @@ By using the Visitor pattern, the next quality attributes are achieved:
 
 - Maintainability: Developers can easily add new operations to be applied over the tests of an order. By creating the new operation class, it will be available for any Test type as interfaces will be maintained
 
+
+### UML diagram
+
+![Test Manager module](https://github.com/jantoniocanizares/TestManagerModuleAssesment/assets/Test_Manager_Module.png)
 
 ### How to start project
 The project does not have a runnable code as it only depicts the structure, model and pattern implementation, but instead a test for each operation implemented as an example verifies that fulfills the requirements.
