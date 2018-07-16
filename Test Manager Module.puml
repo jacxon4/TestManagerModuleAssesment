@@ -1,32 +1,42 @@
 @startuml
-TestManagerModule --> ITest
-TestManagerModule --> IOperation
-ITest <|-- MicrobiologyTest
-ITest <|-- BiochemistryTest
-ITest <|-- HaematologyTest
-ITest <|-- ImmunologyTest
-Order <-- ITest
+
+Interface ITest
+TestManagerModule ...> ITest
+TestManagerModule ...> IOperation
+ITest <|.. MicrobiologyTest
+ITest <|.. BiochemistryTest
+ITest <|.. HaematologyTest
+ITest <|.. ImmunologyTest
+Order o-- ITest
 
 
-IOperation <|-- ValidateOperation
-IOperation <|-- RepeatOperation
+IOperation <|.. ValidateOperation
+IOperation <|.. RepeatOperation
 
 Order : - tests: ITest[]
-ITest : accept(IOperation)
+ITest : {abstract}accept(IOperation)
 ITest : - testType: string
 ITest : - name: string
 MicrobiologyTest : - microbiologyTestProp: string
-MicrobiologyTest : accept(IOperation){operation.perform(this)}
+MicrobiologyTest : +accept(IOperation){operation.perform(this)}
 BiochemistryTest : - biochemistryTestProp: string
-BiochemistryTest : accept(IOperation){operation.perform(this)}
+BiochemistryTest : +accept(IOperation){operation.perform(this)}
 HaematologyTest : - haematologyTestProp: string
-HaematologyTest : accept(IOperation){operation.perform(this)}
+HaematologyTest : +accept(IOperation){operation.perform(this)}
 ImmunologyTest : - immunologyTestProp: string
-ImmunologyTest : accept(IOperation){operation.perform(this)}
+ImmunologyTest : +accept(IOperation){operation.perform(this)}
 
-IOperation : perform(ITest)
-ValidateOperation : perform(ITest)
-RepeatOperation : perform(ITest)
+Interface IOperation
+IOperation : {abstract}perform(ITest)
+ValidateOperation : +perform(ITest)
+RepeatOperation : +perform(ITest)
+
+enum TestTypes{
+    Haematology
+    Microbiology
+    Immunology
+    Biochemistry
+}
 
 
 @enduml
