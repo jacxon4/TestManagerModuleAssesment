@@ -39,7 +39,7 @@ By using the Visitor pattern, the next quality attributes are achieved:
 
 ### UML diagram
 
-![Test Manager module](https://github.com/jantoniocanizares/TestManagerModuleAssesment/assets/Test_Manager_Module.png)
+![Test Manager module](https://github.com/jantoniocanizares/TestManagerModuleAssesment/blob/master/assets/Test_Manager_Module.png)
 
 ### How to start project
 The project does not have a runnable code as it only depicts the structure, model and pattern implementation, but instead a test for each operation implemented as an example verifies that fulfills the requirements.
