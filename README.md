@@ -60,3 +60,4 @@ Test Manager Module
     `-- shared
         `-- enum            <Enumerations needed. Currently Test types>
 ```
+> In order to visualize correctly the UML shema the [GraphViz](https://graphviz.gitlab.io/) pluggin must be installed on your system and the Environment variable properly set
