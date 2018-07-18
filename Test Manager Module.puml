@@ -1,7 +1,7 @@
 @startuml
 
 Interface ITest
-TestManagerModule ...> ITest
+TestManagerModule ...> Order
 TestManagerModule ...> IOperation
 ITest <|.. MicrobiologyTest
 ITest <|.. BiochemistryTest

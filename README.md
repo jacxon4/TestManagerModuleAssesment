@@ -24,7 +24,7 @@ Stakeholders might ask to add new type of operations to be performed over the te
 
 
 ### Pattern chosen
-The chosen pattern is the [Visitor pattern](https://www.codeproject.com/Articles/186185/Visitor-Design-Pattern) as it's main purpose is to detach the model (also called Elements) from the operations (also called Visitors) that may be applied to it.
+The chosen pattern is the [Visitor pattern](https://www.oodesign.com/visitor-pattern.html) as it's main purpose is to detach the model (also called Elements) from the operations (also called Visitors) that may be applied to it.
 As Tests may have different types, and the same operation performed over them differ on the implementation, the visitor pattern ensures that each operation gather all possible implementation in a cohesive approach.
 
 
